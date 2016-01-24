@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html data-ng-app="mtgLifeCounter">
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>MTG Matchmaker</title>
+	<link href="Content/images/colors2.png" rel="shortcut icon" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="Content/images/colors2.png">
+	<meta name="viewport" content="width=device-width" />
+	<link href="Styles/Bootstrap.css" rel="stylesheet" />
+	<link href="Styles/cerulean.css" rel="stylesheet" />
+	<link href="Styles/Site.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="container-fluid">
+
+		<section class="content-wrapper main-content clear-fix">
+			<div class="appHolder">
+
+				<div class="modal" id="diceModal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">Rolling the dice</h4>
+							</div>
+							<div class="modal-body">
+								<div class="playerOneDiceHolder diceHolder text-center">
+									<img src="Content/images/dice1.png" />
+									<img src="Content/images/dice2.png" />
+								</div>
+								<div class="playerTwoDiceHolder diceHolder text-center">
+									<img src="Content/images/dice3.png" />
+									<img src="Content/images/dice4.png" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="playerHolder rotatedDiv" data-ng-controller="PlayerController as playerController2">
+					<player></player>
+				</div>
+
+				<div class="dividerMenuHolder" data-ng-controller="MenuController as menuCtrl">
+					<div class="dividerMenu text-center">
+						<a href="#" data-ng-click="diceModal();">
+							<img src="Content/images/dices_white.png" />
+						</a>
+						<img class="togglerImage" data-ng-click="toggleMenu($event)" src="Content/images/colors2.png" />
+						<a href="#" data-ng-click="refresh();">
+							<img src="Content/images/reloadWhite.png" />
+						</a>
+					</div>
+				</div>
+
+				<div class="playerHolder" data-ng-controller="PlayerController as playerController1">
+					<player></player>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script src="Scripts/jquery-2.1.4.min.js"></script>
+	<script src="Scripts/bootstrap.js"></script>
+	<script src="Scripts/fastclick.js"></script>
+	<script src="Scripts/Script.js"></script>
+	<script src="Scripts/angular.min.js"></script>
+	<script src="Scripts/angularApp.js"></script>
+
+</body>
+</html>

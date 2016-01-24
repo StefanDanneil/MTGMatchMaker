@@ -1,0 +1,17 @@
+{
+  "name": "MtgMatchMaker",
+  "version": "1.0.0",
+  "description": "A simple life tracker able to track your match statistics to make playtesting easier",
+  "main": "angularApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MTG",
+    "statistics",
+    "tracker",
+    "webapp"
+  ],
+  "author": "StefanKarlsson",
+  "license": "ISC"
+}
